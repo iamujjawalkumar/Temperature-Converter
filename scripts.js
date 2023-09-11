@@ -5,7 +5,6 @@ const bodyElement = document.body;
 
 function computeTemp() {
     //ADD + to Avoid String Problem //
-    // const currentValue = +event.target.value;
     const currentValue = +CelciusEl.value;
 
     switch(event.target.name) {
@@ -36,16 +35,19 @@ function clearValues() {
 }
 
 // Function to update background color based on temperature
+
 function updateBackgroundColor(celsiusValue) {
     if (celsiusValue >= 35) {
         bodyElement.classList.remove("cool-bg");
         bodyElement.classList.remove("cool-mod-bg");
+        bodyElement.classList.remove("hot-mod-bg");
         bodyElement.classList.add("hot-bg");
     } else if (celsiusValue <= 15) {
         bodyElement.classList.remove("hot-bg");
         bodyElement.classList.remove("cool-mod-bg");
+        bodyElement.classList.remove("hot-mod-bg");
         bodyElement.classList.add("cool-bg");
-    } else if (celsiusValue > 25 && celsiusValue < 35) {
+    } else if (celsiusValue >= 25 && celsiusValue < 35) {
         bodyElement.classList.remove("hot-bg");
         bodyElement.classList.remove("cool-bg");
         bodyElement.classList.remove("cool-mod-bg");
@@ -53,6 +55,7 @@ function updateBackgroundColor(celsiusValue) {
     } else if (celsiusValue > 15 && celsiusValue < 25 ) {
         bodyElement.classList.remove("hot-bg");
         bodyElement.classList.remove("cool-bg");
+        bodyElement.classList.remove("hot-mod-bg");
         bodyElement.classList.add("cool-mod-bg");
     } else {
         bodyElement.classList.remove("hot-bg");
@@ -63,5 +66,5 @@ function updateBackgroundColor(celsiusValue) {
 
 }
 
-// Initial background color based on the default Celsius value
+// Default background color based on the default Celsius value
 updateBackgroundColor("default");

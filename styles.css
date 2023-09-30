@@ -68,7 +68,7 @@ input::placeholder {
     background-color: rgb(201, 71, 71);
 }
 
-/* Define background gradients for hot, cool & moderate temperatures */
+/* background gradients for hot, cool & moderate temperatures */
 
 .hot-bg {
     background: linear-gradient(to right top, #d27373, #c53434, #e7372b);

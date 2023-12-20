@@ -68,6 +68,18 @@ input::placeholder {
     background-color: rgb(201, 71, 71);
 }
 
+footer {
+  padding-top: 1.5rem;
+  font-size: 0.7rem;
+  line-height: 0.2rem;
+  text-align: center;
+}
+
+.icons {
+  max-width: 25px;
+  height: auto;
+}
+
 /* background gradients for hot, cool & moderate temperatures */
 
 .hot-bg {
